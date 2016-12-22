@@ -1,15 +1,14 @@
 G21 ;metric values
 G90 ;absolute positioning
-M82 ;set extruder to absolute mode
 M107 ;start with the fan off
 G28 X0 Y0 ;move X/Y to min endstops
 G28 Z0 ;move Z to min endstops
 G1 Z15.0 F9000 ;move the platform down 15mm
 G1 F9000
 M117 Imprimiendo...
-G91;-- Relative
+M83 ;set extruder to relative mode
 G1 E12 F200
-G90 ;-- Absolute
-G1 E0;
+M82 ;set extruder to absolute mode
+G92 E0  ; Set the current extruder position to 0
 
 
